@@ -1,15 +1,57 @@
-import React from 'react'
+import React from "react";
+
+import { Link, Links, NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className='w-full '>
-       <nav className='w-full h-12 bg-[#000020] flex justify-center items-center gap-20'>
-        <h1 className='font-bold hover:text-sky-300 transition duration-300 ease-in-out'>Home</h1>
-        <h1 className='font-bold hover:text-sky-300 transition duration-300 ease-in-out' >About</h1>
-        <h1 className='font-bold hover:text-sky-300 transition duration-300 ease-in-out' >Contact</h1>
-        </nav>        
-    </div>
-  )
-}
+    <div className="w-full ">
+      <nav className="w-full h-12 bg-[#000020] flex justify-center items-center gap-20">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `font-bold   ${isActive ? "text-sky-300 transition duration-300 ease-in-out" : "text-white"} `
+          }
+        >
+          Home
+        </NavLink>
 
-export default Nav
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `font-bold   ${isActive ? "text-sky-300 transition duration-300 ease-in-out" : "text-white"} `
+          }
+        >
+          About
+        </NavLink>
+
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `font-bold   ${isActive ? "text-sky-300 transition duration-300 ease-in-out" : "text-white"} `
+          }
+        >
+          Contact
+        </NavLink>
+
+
+
+
+         <NavLink
+          to="/product"
+          className={({ isActive }) =>
+            `font-bold   ${isActive ? "text-sky-300 transition duration-300 ease-in-out" : "text-white"} `
+          }
+        >
+          Product
+        </NavLink>
+
+
+
+
+
+      </nav>
+    </div>
+  );
+};
+
+export default Nav;
