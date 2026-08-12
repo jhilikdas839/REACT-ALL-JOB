@@ -1,9 +1,11 @@
 import React from "react";
-
+import {CounterContext} from '../MainContext'
+import{useContext} from 'react'
 function Footer() {
+  const {count,setCount} = useContext(CounterContext)
   return (
     <div>
-      <h1>Footer Section</h1>
+       <button onClick={()=>setCount(count-1)}>Click Here to decrese count Value</button>
     </div>
   );
 }

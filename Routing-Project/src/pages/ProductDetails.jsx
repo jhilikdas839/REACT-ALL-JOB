@@ -6,7 +6,7 @@ const ProductDetails = () => {
   const params = useParams();
 
   const Handeler = ()=>{
-    navigate
+    navigate("/")
   }
 
   return (

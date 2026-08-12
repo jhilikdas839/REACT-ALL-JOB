@@ -1,7 +1,8 @@
 import React from 'react'
-
-function Header(props) {
-    let {count , setCount} = props
+import {CounterContext} from '../MainContext'
+import{useContext} from 'react'
+function Header() {
+const {count,setCount} = useContext(CounterContext)
     
   return (
     <div>
